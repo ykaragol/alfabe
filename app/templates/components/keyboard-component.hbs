@@ -1,0 +1,13 @@
+<div class="container-fluid center-block bottom-align-text only-vertical">
+    <div class="row">
+      {{#each buttons as |button|}}
+        <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
+            {{#if button.pressed}}
+                <input class="btn btn-default btn-xs btn-block btn-success" type="button" value={{button.value}} {{action "clickHandler" button.value}} />
+            {{else}}
+                <input class="btn btn-default btn-xs btn-block btn-info" type="button" value={{button.value}} {{action "clickHandler" button.value}} />
+            {{/if}}
+        </div>
+      {{/each}}
+    </div>
+</div>
